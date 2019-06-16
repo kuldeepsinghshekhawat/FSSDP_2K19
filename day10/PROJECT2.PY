@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 16 19:34:45 2019
+
+@author: lenovo
+"""
+from PIL import Image,ImageDraw,ImageFont
+img=Image.open("forsk.jpg.png")
+font_type=ImageFont.truetype('Qwerty Ability - Personal Use.otf',47)
+font_type1=ImageFont.truetype('Montserrat-Regular.ttf',40)
+font_type_1=ImageFont.truetype('Montserrat-Regular.ttf',55)
+font_type2=ImageFont.truetype('Concetta Kalvani Signature.ttf',30)
+font_type3=ImageFont.truetype('Montserrat-Regular.ttf',20)
+draw=ImageDraw.Draw(img)
+(x, y) = (50, 20)
+draw.text((x,y),text="CERTIFICATE   OF   COPLETION",fill='RED',font=font_type)
+draw=ImageDraw.Draw(img)
+(x, y) = (280, 70)
+draw.text((x,y),text="This certificate awarded to",fill='Black',font=font_type3)
+draw=ImageDraw.Draw(img)
+(x, y) = (140, 100)
+draw.text((x,y),text="Kuldeep Singh Shekhawat",fill='orange',font=font_type_1)
+draw=ImageDraw.Draw(img)
+(x, y) = (150, 180)
+draw.text((x,y),text="For complete the summer Training in PYTHON & ML",fill='Black',font=font_type3)
+draw=ImageDraw.Draw(img)
+(x, y) = (290, 250)
+draw.text((x,y),text=" ON Certificate generator",fill='Black',font=font_type3)
+draw=ImageDraw.Draw(img)
+(x, y) = (200, 320)
+draw.text((x,y),text=" BY Forsk Technologies pvt. ltd",fill='RED',font=font_type1)
+draw=ImageDraw.Draw(img)
+(x, y) = (20, 380)
+draw.text((x,y),text="Sylvester Sir ",fill='Black',font=font_type1)
+draw=ImageDraw.Draw(img)
+(x, y) = (130, 450)
+draw.text((x,y),text="Sylvester ",fill='Black',font=font_type2)
+draw=ImageDraw.Draw(img)
+(x, y) = (600, 380)
+draw.text((x,y),text="Sign of the student",fill='Black',font=font_type3)
+draw=ImageDraw.Draw(img)
+(x, y) = (600, 450)
+draw.text((x,y),text="kuldeep",fill='Black',font=font_type2)
+draw=ImageDraw.Draw(img)
+img.show()
+
