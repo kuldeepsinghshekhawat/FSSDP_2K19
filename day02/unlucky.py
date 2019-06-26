@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun  5 14:04:26 2019
+Created on Sun Jun 23 12:37:48 2019
 
 @author: lenovo
 """
-list_1 = [1,3,6,78,35,55]
-list_2 = [12,24,35,24,88,120,155]
 
-#these list define the list_1 and list_2
-intersection_list = list(set(list_1).intersection(set(list_2)))
+total = 0
+user_input=input("Enter the number")
+for index in range( len( user_input ) ):
+    # checks if current number or previous number is 13
+    if (user_input[index] == 13 or user_input[index-1] == 13):
+        continue
+    else:
+        total += 1
 
-print (intersection_list)
+print (total)

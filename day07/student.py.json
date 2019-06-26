@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 11 10:36:19 2019
+
+@author: lenovo
+"""
+
+import json
+
+json_student = """
+{
+	"student": {
+		"name": "kuldeep",
+		"last_name": "shekhawat",
+		"photo": "www.facebook.com",
+		"department": "computer engineering",
+		"areas": [{
+			"research_area1": "sikar",
+			"research_area2": "jaipur"
+		}],
+		"contact_detail": [{
+			"number": [{
+				"primary_number": 9001668415,
+				"secondary_number": 7742775759
+			}],
+			"Emai_id": [{
+					"Email_id1": "kuldeepsinghchirana101@gmail.com",
+					"Email_id2": "kuldeepsinghchiranaWgmail.com"
+				}
+
+			]
+		}
+    ]
+  }
+}
+                           
+                    
+    
+"""
+print (type(json_student))
+
+# Converts  JSON Data types to Python Data Types 
+my_data = json.loads(json_student)
+print (type(my_data) )  # its a python dictionary  , it uses the table to convert 
+print (my_data) 
+print (my_data['student']['areas'][0]['research_area1'])

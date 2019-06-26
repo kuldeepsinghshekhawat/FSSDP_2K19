@@ -4,7 +4,7 @@ Created on Sun Jun 16 22:14:24 2019
 
 @author: lenovo
 """
-
+#import sleep
 from PIL import Image,ImageDraw,ImageFont
 img=Image.open("forsk.jpg.png")
 font_type1=ImageFont.truetype('Montserrat-Regular.ttf',30)

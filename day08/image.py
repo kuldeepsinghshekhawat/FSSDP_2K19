@@ -6,9 +6,10 @@ Created on Thu Jun 13 19:47:56 2019
 """
 
 from PIL import Image
+#it is the pillow liibrary for image
 import requests
 from io import BytesIO
-import requests
+
 
 url = "http://facebook.in/images/kppppp_jpg_bw.jpg"
 response = requests.get(url)

@@ -247,14 +247,14 @@ Code Challenge
 
 """
 This Python function accepts a list of numbers and computes the product of all the odd numbers:
-
+list1=[1,2,3,4,5,6,7]
 def productOfOdds(list):
     result = 1
     for i in list:
         if i % 2 == 1:
             result *= i
     return result
-    
+productOfOdds(list1)    
 Rewrite the Python code using map, filter, and reduce:
 
 def productOfOdds(list):

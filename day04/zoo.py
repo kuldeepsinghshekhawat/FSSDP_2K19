@@ -1,34 +1,37 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 15 10:55:41 2019
-
-@author: lenovo
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 15 10:42:29 2019
+Created on Sun Jun 23 13:31:21 2019
 
 @author: lenovo
 """
 
 import csv
+#it is the csv library
+with open('zoo.csv','rU') as csv_file:# open a zoo file
+    csv_reader = csv.reader(csv_file, delimiter=',') #it is the read the csv file
+    
+    for row in csv_reader:#for loop define the how many rows in csv file
+        print (row)
 
-zoo= open('zoo.csv','r')
-csv_reader = csv.reader(zoo, delimiter=',')
-for row in csv_reader:
-    print (row)
-for column in csv_reader:
-    for i in range(len(column)):
-        print (column[i])            
-total_water_needed = 0
+with open('zoo.csv','rU') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    
+    for column in csv_reader:
+        for i in range(len(column)):
+            print (column[i])
+with open('zoo.csv','r') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    
+    total_water_needed = 0
     # Use the below line to skip the header line from the csv file 
-next(csv_reader) 
-for column in csv_reader:
-    total_water_needed = int(column[2])+total_water_needed
+    next(csv_reader) 
+    for column in csv_reader:
+        total_water_needed = int(column[2])+total_water_needed
 
 print ("Total water needed by all the animals : "+str(total_water_needed))
-zoo.close()
+
+
+
 with open('zoo.csv','rU') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     
@@ -59,40 +62,3 @@ print ("Total water needed by tiger : "+str(total_water_needed_tiger))
 print ("Total water needed by zebra : "+str(total_water_needed_zebra))
 print ("Total water needed by lion : "+str(total_water_needed_lion))
 print ("Total water needed by kangaroo : "+str(total_water_needed_kangaroo))
-
-# Hands On 5
-import csv
-
-with open('zoo.csv','rU') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    
-    total_water_needed_elephant = 0
-    total_water_needed_tiger = 0
-    total_water_needed_zebra = 0
-    total_water_needed_lion = 0
-    total_water_needed_kangaroo = 0
-
-
-    # Use the below line to skip the header line from the csv file 
-    next(csv_reader) 
-    for column in csv_reader:
-        if column[0]=="elephant":
-            total_water_needed_elephant = int(column[2])+total_water_needed_elephant
-        if column[0]=="tiger":
-            total_water_needed_tiger = int(column[2])+total_water_needed_tiger
-        if column[0]=="zebra":
-            total_water_needed_zebra = int(column[2])+total_water_needed_zebra
-        if column[0]=="lion":
-            total_water_needed_lion = int(column[2])+total_water_needed_lion
-        if column[0]=="kangaroo":
-            total_water_needed_kangaroo = int(column[2])+total_water_needed_kangaroo
-            
-animal_dictionary = {}
-
-animal_dictionary["elephant"]=total_water_needed_elephant
-animal_dictionary["tiger"]=total_water_needed_tiger
-animal_dictionary["zebra"]=total_water_needed_zebra
-animal_dictionary["lion"]=total_water_needed_lion
-animal_dictionary["kangaroo"]=total_water_needed_kangaroo
-
-print (animal_dictionary)

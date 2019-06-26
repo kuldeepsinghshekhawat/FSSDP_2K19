@@ -48,7 +48,9 @@ def zodiac_sign(day, month):
     print(astro_sign) 
       
 # Driver code  
-if __name__ == '__main__': 
-    day = 23
-    month = "may"
+    
+if __name__ == '__main__':
+    
+    day = int(input("Enter the day>>"))
+    month = input("Enter the month>> ")
     zodiac_sign(day, month) 
