@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jul 18 12:35:04 2019
+
+@author: lenovo
+"""
+
+{% extends "layout1.html" %}
+
+{% block code %}
+    <h3>Please enter your details.</h3>
+    <p>Enter the total information in this (the number may have digits in groups of 0 & 1, any decimal number ).</p><br>
+    <form action="{{ url_for('output') }}" method="post">
+      <input type="text" name="data" placeholder="Enter your information"><br><br>
+      <input type="submit" name="sub" value="Send">
+    </form>
+  {% endblock %}
