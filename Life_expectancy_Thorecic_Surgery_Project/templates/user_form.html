@@ -1,0 +1,35 @@
+<!doctype.html>
+<htlm lang="en" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <title>Form</title>
+    <h1 align="center">Enter The Symptions Of Patient</h1> 
+</head>
+<body background="/static/images/stethoscope.jpg"> 
+  <form action="{{ url_for('user_input') }}" method="post"> 
+    <center><font size="4">Enter FEV(Forced expiratory volume) Value Of Patient<input type="text" name="Symption1" placeholder="0-5"></center>
+    <br>
+    <center><font size="4">Enter Performance Of Patient<input type="text" name="Symption2" placeholder="0/1/2"></center>  
+    <br>
+    <center><font size="4">Enter Haemoptysis Of Patient<input type="text" name="Symption3" placeholder="1/0"></center>
+    <br>
+    <center><font size="4">Does Patient Have Dyspnoea<input type="text" name="Symption4" placeholder="1/0"></center>
+    <br>
+    <center><font size="4">Enter Cough Symptions Of Patient<input type="text" name="Symption5" placeholder="1/0"></center>
+    <br>
+    <center><font size="4">Does Patient Have Weekness<input type="text" name="Symption6" placeholder="1/2/3/4"></center>
+    <br>
+    <center><font size="4">DM(diabetes mellitus) Of Patient<input type="text" name="Symption7" placeholder="1/0"></center>
+    <br>
+    <center><font size="4">MI(myocardial infarction) Of Patient<input type="text" name="Symption8" placeholder="1/0"></center>
+    <br>
+    <center><font size="4">PAD(peripheral arterial disease) Of Patient<input type="text" name="Symption9" placeholder="1/0"></center>
+    <br>
+     <center><font size="4">Does Patient Smoke<input type="text" name="Symption10" placeholder="1/0"></center>
+    <br>
+     <center><font size="4">Enter Age Of Patient<input type="text" name="Symption11" placeholder="0-90"></center>
+    <br>
+    <center><input type="submit" name="sub" value="Send data"></center>
+  </form>
+</body>
+</html>  
