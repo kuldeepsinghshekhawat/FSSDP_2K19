@@ -1,4 +1,7 @@
-
+"""
+scripting lang={A script or scripting language is a computer language with a series 
+   of commands within a file that is capable of being executed without being compiled}
+"""
 """
 Python in Industry
   In Google Python is one of the primary language
@@ -257,7 +260,7 @@ p8 = "FORSK"
 +p = "FORSK"
 -p = "FORSK"   
 *p = "FORSK"
-/p = "FORSK"
+_p = "FORSK"
 # Cannot start with or have any Arithmetic Operators
   
 
@@ -896,7 +899,7 @@ while ( True ):
 
 # Taking multiple input from user
 while True:
-    user_input = raw_input("Enter values >")
+    user_input = input("Enter values >")
     
     #append this entry to other data structure
     if not user_input:
